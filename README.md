@@ -4,7 +4,7 @@ Olá,
 
 Inicialmente, gostaria de agradecer muito pela vontade de fazer parte da equipe da UNIFAGOC. Nós somos um centro universitário referência na zona da mata mineira. Nós, do Departamento de Tecnologia da Informação, desenvolvemos e mantemos os sistemas pertinentes à atividade da instituição. Temos como clientes os colaboradores do centro universitário, parceiros externos e, principalmente, nossos alunos.
 
-A idéia dessa avaliação é nos permitir identificar melhor as habilidades dos candidatos à vada de desenvolvedor fullstack. Esse desafio deve ser feito por você. Qualquer dúvida técnica relacionada ao teste, entre em contato com o avaliador.
+A idéia dessa avaliação é nos permitir identificar melhor as habilidades dos candidatos à vaga de desenvolvedor fullstack. Esse desafio deve ser feito por você. Qualquer dúvida técnica relacionada ao teste, entre em contato com o avaliador.
 
 A entrega deve ser feita por meio de um repositório publico aqui no github. Não se esqueça de criar um arquivo README.md na raiz de seu projeto com as instruções para utilização do seu projeto. Seguiremos extritamente essas instruções, por isso, tente deixar o mais claro e específico possível. Você terá 7 dias para execução de seu teste a contar da hora de envio pelo seu email.
 
@@ -46,8 +46,18 @@ A interface de visualização das informações precisará ser desenvolvida com 
 
 ## Ambiente de Desenvolvimento e Entrega
 
-O sistema deve ser implementado sobre um container Docker e sues arquivos de configuração (Dockerfile e/ou docker-compose.yml) precisam esta disponíveis no repositório a ser apresentado. Mais uma vez, é imprecindível que no arquivo README.md, na raiz do projeto, esteja bem definida todas as informações necessárias para a execução do projeto.
+O sistema deve ser implementado sobre um container Docker e seus arquivos de configuração (Dockerfile e/ou docker-compose.yml) precisam estar disponíveis no repositório a ser apresentado. Mais uma vez, é imprecindível que no arquivo README.md, na raiz do projeto, esteja bem definida todas as informações necessárias para a execução do projeto.
 
+## Pontos de Avaliação
+
+Além da completudo dos item acima descritos, serão avaliados:
+
+* Legibilidade, facilide para modificação, eficiência e reusabilidade do código
+* Orientação a Objetos
+* Testes Automatizados (diferencial)
+* Clean Code (diferencial)
+* Object Calisthenics (diferencial)
+* Princípios SOLID (diferencial)
 
 ## Material de Apoio
 
