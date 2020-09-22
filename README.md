@@ -42,7 +42,16 @@ Toda a comunicação do aplicativo com suas diferentes instâncias precisará se
 
 ### Frontend
 
-A interface de visualização das informações precisará ser desenvolvida com tecnologias Javascript, CSS3 e HTML5. Indicamos fortemente a utilização do framework [Vue.js](https://vuejs.org/) e/ou [Quasar](https://quasar.dev/). Utilizamos esses dois nos nossos produtos e a implementação com eles será um diferencial, porém, bons códigos serão sempre bem avaliados, sejam em qual estrutura for. Deverá existir uma interface para que os Administradores possam fazer a Criação, Leitura, Atualização e Deleção dos registros dos Pacientes e Médicos. De igual forma, aos Médicos será apresentada uma interface para fazer o lançamento das informações sobre Exames e Laudos, bem como as respostas às solicitações de Atendimento pelos Pacientes. Por último, os Pacientes deverão visualizar uma interface que lhes apresente suas informações cadastrais, resultados dos Exames e Laudos e lhes prossibilite acompanhamento das solicitações de Atendimento aos médicos.
+A interface de visualização das informações precisará ser desenvolvida com tecnologias Javascript, CSS3 e HTML5. Indicamos fortemente a utilização do framework [Vue.js](https://vuejs.org/) e/ou [Quasar](https://quasar.dev/). Utilizamos esses dois nos nossos produtos e a implementação com eles será um diferencial, porém, bons códigos serão sempre bem avaliados, sejam em qual estrutura for. 
+
+Deverão existir as seguintes interfaces:
+
+* uma interface de autenticação dos agentes, limitando o acesso às demais interfaces de acordo com o tipo de cada um
+* uma interface para que os Administradores possam fazer a Criação, Leitura, Atualização e Deleção dos registros dos Pacientes e Médicos
+* uma interface na qual aos Médicos poderão fazer o lançamento das informações sobre Exames e Laudos
+* uma interface na qual os Médicos possam responder às solicitações de Atendimento dos Pacientes
+* uma interface para que os Pacientes possam visualizar o histórico de Exames e Laudos cadastrados para eles.
+* uma interface para que os Pacientes possam solicitar os Atendimentos pelos Médicos
 
 ## Ambiente de Desenvolvimento e Entrega
 
@@ -52,6 +61,7 @@ O sistema deve ser implementado sobre um container Docker e seus arquivos de con
 
 Além da completudo dos item acima descritos, serão avaliados:
 
+* Arquivo README.md com as instruções para execução do sistema
 * Legibilidade, facilide para modificação, eficiência e reusabilidade do código
 * Orientação a Objetos
 * Testes Automatizados (diferencial)
