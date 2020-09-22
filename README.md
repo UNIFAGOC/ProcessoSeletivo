@@ -14,4 +14,6 @@ A entrega deve ser feita por meio de um repositório publico aqui no github. Nã
 
 Vivemos em uma sociedade onde o fluxo de pessoas é, como nunca na história da humanidade, volumoso, rápido e perigoso. A cada segundo milhões de pessoas atravessam as fronteiras dos países, sejam a passeio, a negócios, fugindo de guerras ou levando ajuda a quem mais precisa. Esse cenário é um desafio às autorizadades sanitárias que precisam lidar com questões que vão desde a importação de produtos localmente proibidos (como remédios e drogas) à doenças globais.
 
-Universidades e Governos de todo o mundo veem tentando formas de identificar possíveis focos de doenças de todo o tipo e forma. Da localização de focos de criadouros de mosquitos ao fluxo de pessoas por aeroportos, essa informações passam por pela capacidade de coleta de dados e identificação de possíveis vítimas do mal analisado. Centros universitários alocam esforços 
+Universidades e Governos de todo o mundo veem tentando formas de identificar possíveis focos de doenças de todo o tipo e forma. Da localização de focos de criadouros de mosquitos ao fluxo de pessoas por aeroportos, essa informações passam por pela capacidade de coleta de dados e identificação de possíveis vítimas do mal analisado. Centros universitários alocam esforços para o desenvolvimento de ferramentas que auxiliem a comunidade na gestão dessas necessidades, criando modelos e sistemas capazes de prover as informações que as autoridades sanitárias precisam.
+
+Nosso desafio se baseará nesse ambiente.
