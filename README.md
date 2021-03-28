@@ -1,4 +1,4 @@
-# Processo Seletivo (#1)
+# Processo Seletivo (#2)
 
 Olá,
 
@@ -6,31 +6,34 @@ Inicialmente, gostaria de agradecer muito pela vontade de fazer parte da equipe 
 
 A idéia dessa avaliação é nos permitir identificar melhor as habilidades dos candidatos à vaga de desenvolvedor fullstack. Esse desafio deve ser feito por você. Qualquer dúvida técnica relacionada ao teste, entre em contato com o avaliador.
 
-A entrega deve ser feita por meio de um repositório publico aqui no github. Não se esqueça de criar um arquivo README.md na raiz de seu projeto com as instruções para utilização do seu projeto. Seguiremos extritamente essas instruções, por isso, tente deixar o mais claro e específico possível. Você terá 7 dias para execução de seu teste a contar da hora de envio pelo seu email.
+A entrega deve ser feita por meio de um repositório publico aqui no github. Não se esqueça de criar um arquivo README.md na raiz de seu projeto com as instruções para utilização do seu projeto. Seguiremos extritamente essas instruções, por isso, tente deixar o mais claro e específico possível. Você terá 15 dias para execução de seu teste a contar da hora de envio deste material para seu email por nossa equipe de Recursos Humanos.
+
+>![Vida de Programador](https://vidadeprogramador.com.br/wp-content/uploads/2011/10/tirinha319.png)
+>(FONTE: Vida de Programador. Disponível em: https://vidadeprogramador.com.br/2011/10/26/prova-pratica/)
+
+Nosso principal objetivo com essa avaliação é observar não só o estado atual da sua maturidade como desenvolvedor, mas também observar o quanto você pode crescer e como podemos ajudar você a conseguir isso. Por isso, lembre-se: Precisamos ver o máximo de módulos funcionais possíveis. 
+
+> ### Não deixe de nos mostrar seu trabalho!
 
 ------
 
-## Uma nova ferramenta para nosso dia a dia
+## Mudanças no mercado à caminho
 
-A informatização de sistemas antes baseados em documentos físicos veem transformando o dia a dia dos mais diversos setores da sociedade. De formas de pagamento à documentos governamentais, a revolução digital aproximou pessoas dos dados e elevou exponencialmente a capacidade de extração de informações e conhecimento. Uma das aplicações que já podemos ver no nosso dia a dia são sistemas de gestão de informações médicas, como o [Aplicativo do SUS](https://play.google.com/store/apps/details?id=br.gov.datasus.guardioes&hl=pt_BR) que possibilita a busca das informações médicas dos usuários e o acompanhamento de exames, vacinas e agendamentos.
+Desde outubro de 2020, o mercado financeiro brasileiro vem sendo balançado pela iniciativa de integração tecnológica promovida pelo Banco Central (BaCen). O lançamento do PIX, método de pagamento instantâneo, vem mudando a forma com que as pessoas interagem com as empresas prestadoras de serviços, comércio e indústrias. Já não é incomun a possibilidade de pagamento de nossas compras na Internet utilizando a nova ferramenta.
 
-A você é solicitado que desenvolva um sistema de controle de prontuário médico com as seguintes caracteristicas: 
+Na esteira do PIX, o BaCen agora propõe a implementação do _open banking_, uma plataforma institucional de compartilhamento de informações entre instituições financeiras, fintechs e bancos. Para saber um pouco mais, sugiro [esta matéria da InfoMoney](https://www.infomoney.com.br/guias/open-banking/).
 
-* deverão existir três agentes no sistema: Paciente, Médico e Administrador. 
-* os Administradores serão capazes de cadastrar os Pacientes e Médicos.
-* os Médicos podem realizar lançamentos de resultados de exames e laudos médicos nas fichas dos Pacientes. 
-* os Pacientes poderão solicitar Atendimentos com qualquer Médico inscrito no sistema, que por sua vez, deverá responder ao Paciente informado se esta disponível ou não. 
-* os Pacientes não poderão solicitar Atendimentos a outro Médico antes da resposta da solicitação anterior.
-* os Pacientes só poderão solicitar Atendimentos a Médicos que não possuam solicitações de Atendimento pendentes de resposta
-* os Pacientes poderão solicitar a retirada dos seus dados do sistema, mas em razão de normas e legislação, esses dados precisarão ser anonimizados e não deletados.
+Nosso disafio envolverá um protótipo dessa plataforma. 
 
-Além das informações que achar necessário para o cadastro e autenticação dos agentes descritos, são obrigatórios as seguintes informações de acordo com o tipo do agente:
+Para nossa prova de conceito, desenvolveremos uma plataforma online com controle de acesso por usuário e senha. As entidades envolvidas na plaraforma serão:
 
-* Pacientes: Endereço residencial, Telefone de Contato, CPF (validar)
-* Médicos: CPF (validar), Matrícula no Conselho Regional de Medicina (CRM), Especialidade Médica ([vide](https://pt.wikipedia.org/wiki/Lista_de_especialidades_m%C3%A9dicas))
-* Administradores: CPF (validar)
+![]()
 
-Você precisará desenvolver o sistema em 3 partes: _Backend_, _API REST_, e _Frontend_. Para cada uma das partes, são requeridas algumas características abaixo listadas, mas não se limite somente a elas. Mostre o máximo de features efetivamente funcionais que conseguir!
+#### A
+
+
+
+Você precisará desenvolver o sistema em 3 partes: _Backend_, _API REST_, e _Frontend_. Para cada uma das partes, são requeridas algumas características, mas não se limite somente a elas. Mostre o máximo de features efetivamente funcionais que conseguir!
 
 ### Backend
 
@@ -43,15 +46,6 @@ Toda a comunicação do aplicativo com suas diferentes instâncias precisará se
 ### Frontend
 
 A interface de visualização das informações precisará ser desenvolvida com tecnologias Javascript, CSS3 e HTML5. Indicamos fortemente a utilização do framework [Vue.js](https://vuejs.org/) e/ou [Quasar](https://quasar.dev/). Utilizamos esses dois nos nossos produtos e a implementação com eles será um diferencial, porém, bons códigos serão sempre bem avaliados, sejam em qual estrutura for. 
-
-Deverão existir as seguintes interfaces:
-
-* uma interface de autenticação dos agentes, limitando o acesso às demais interfaces de acordo com o tipo de cada um
-* uma interface para que os Administradores possam fazer a Criação, Leitura, Atualização e Deleção dos registros dos Pacientes e Médicos
-* uma interface na qual aos Médicos poderão fazer o lançamento das informações sobre Exames e Laudos
-* uma interface na qual os Médicos possam responder às solicitações de Atendimento dos Pacientes
-* uma interface para que os Pacientes possam visualizar o histórico de Exames e Laudos cadastrados para eles.
-* uma interface para que os Pacientes possam solicitar os Atendimentos pelos Médicos
 
 ## Ambiente de Desenvolvimento e Entrega
 
