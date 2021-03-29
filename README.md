@@ -9,11 +9,12 @@ A idéia dessa avaliação é nos permitir identificar melhor as habilidades dos
 A entrega deve ser feita por meio de um repositório publico aqui no github. Não se esqueça de criar um arquivo README.md na raiz de seu projeto com as instruções para utilização do seu projeto. Seguiremos extritamente essas instruções, por isso, tente deixar o mais claro e específico possível. Você terá 15 dias para execução de seu teste a contar da hora de envio deste material para seu email por nossa equipe de Recursos Humanos.
 
 >![Vida de Programador](https://vidadeprogramador.com.br/wp-content/uploads/2011/10/tirinha319.png)
+>
 >(FONTE: Vida de Programador. Disponível em: https://vidadeprogramador.com.br/2011/10/26/prova-pratica/)
 
 Nosso principal objetivo com essa avaliação é observar não só o estado atual da sua maturidade como desenvolvedor, mas também observar o quanto você pode crescer e como podemos ajudar você a conseguir isso. Por isso, lembre-se: Precisamos ver o máximo de módulos funcionais possíveis. 
 
-> ### Não deixe de nos mostrar seu trabalho!
+> #### Não deixe de nos mostrar seu trabalho!
 
 ------
 
@@ -27,7 +28,7 @@ Nosso disafio envolverá um protótipo dessa plataforma.
 
 Para nossa prova de conceito, desenvolveremos uma plataforma online com controle de acesso por usuário e senha. As entidades envolvidas na plaraforma serão:
 
-![]()
+![](https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png)
 
 #### A
 
