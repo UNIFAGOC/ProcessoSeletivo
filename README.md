@@ -26,6 +26,8 @@ Na esteira do PIX, o BaCen agora propõe a implementação do _open banking_, um
 
 Nosso disafio envolverá um protótipo dessa plataforma. 
 
+## Do contexto e propostas
+
 Para nossa prova de conceito, desenvolveremos uma plataforma online com controle de acesso por usuário e senha. As entidades envolvidas na plaraforma serão:
 
 <a href="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" target="_blank">
@@ -44,6 +46,163 @@ Esta entidade trará as informações pessoais sobre os proprietários da contas
 * **Data de Nascimento** - Data representada seguindo o padrão ISO 8601. Mais informações [aqui](https://en.wikipedia.org/wiki/ISO_8601)
 
 ### Instituição Financeira
+
+Esta entidade trará as informações sobre as instituições registradas no Banco Central. 
+
+* **CNPJ** - Candastro Nascional de Pessoas Jurídicas segundo padrão da Receita Federal de 14 dígitos. Outras informações podem ser localizadas [aqui](https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica)
+* **Razão Social** - Nome único das empresas mediante as entidades fiscais.
+* **Nome Fantasia** - Nome divulgado pelas empresas. Similar às marcas ou produtos. A título de exemplo, o Banco do Brasil (nome fantasia) tem por razão social "Banco do Brasil S.A.".
+* **Código Bancário** - Cada instituição financeira que opera no Brasil possui um código identificador único. Alguns 
+  desses valores podem ser localizados [aqui](https://contasimples.com/blog/lista-de-codigos-dos-bancos/)
+* **Logomarca** - Identificação visual do banco. Pode-se utilizar uma imagem padrão, caso seja necessário.  
+
+### Usuários
+
+* **Login** - Nome único de identificação dos usuários dentro do sistema.
+* **Senha** - Senha de acesso ao sistema. Deve ser criptografada em base64 para persistência no banco de dados. 
+  Precisa apresentar o seguinte grau de complexidade:
+  * Ao menos 6 caracteres
+  * Ao menos 1 letra maiúscula
+  * Ao menos 1 letra minúscula
+  * Ao menos 1 dígito
+  * Ao menos um caracter especial dentre: ( ) # @ ! ?
+* **Tipo** - Os usuários do sistema podem ser de dois típos: Clientes ou Instituições. As regras de negócio 
+  pertinentes a cada um serão descritas a frente.
+* **Entidade** - Relacionamento com a entidade correspondente ao campo **Tipo**.
+* **Ativo** - Campo booleano, com valor padrão `false` que limita o acesso dos usuários ao sistema. Esse limite 
+  aplica-se apenas a usuários com `Tipo = Instituição`
+
+### Contas
+
+* **Identificador Único** - Afim de simplificar nosso protótipo, as contas bancárias serão representadas por 
+  identificadores únicos e incrementais. Não é preciso verificar e/ou validar dígitos.
+* **CPF do Cliente** - Relacionamento com a entidade Clietes
+* **CNPJ da Instituição Financeira** - Relacionamento com a entidade Instituição Financeira
+* **Saldo** - Valor monetário do saldo da conta em Reais. Atentar à representação e casas decimais pertinentes.
+* **Data de Abertura** - Data de criação do registro da conta, automaticamente preenchida. Seguir padrão ISO 8601.
+* **Data de Encerramento** - Data de fechamento da conta. Quando não encerrada, guardar valor `null`. Seguir padrão ISO 
+  8601
+
+### Produtos Financeiros
+
+* **Identificador Único** - Identificador único, incremental, iniciando pelo valor `100000`
+* **CNPJ da Instituição Financeira** - Relacionamento com a entidade Instituição Financeira
+* **Descrição** - Campo em texto descrevendo o produto ofertado.
+* **Valor Mínimo** - Valor monetário mínimo para acesso ao produto. Validar em confronto com o saldo na conta do 
+  Cliente. Atentar para representação e casas decimais pertinentes.
+* **Taxa de Administração** - Valor percentual cadastrado pela instituição com 4 algarismos significativos ([ver 
+  aqui](https://pt.wikipedia.org/wiki/Algarismo_significativo)). Atentar para 
+  representação e casas decimais pertinentes.
+
+### Contratos
+
+* **Identificador Único** - Identificador único e incremental
+* **Número da Conta** - Relacionamento com a entidade Contas
+* **Identificador do Produto Financeiro** - Relacionamento com a entidade Produto Financeiro
+* **Valor Investido** - Valor montário utilizado na contratação do produto.
+* **Taxa de Administração** - Valor percentual da taxa de administração. Deve sempre ser menor ou igual ao valor 
+  registrado no campo relativo da entidade Produto Financeiro.
+* **Data de Contratacao** - Data de assinatura do contrato. Sempre igual ou superior à data de abertura da conta. 
+  Usar padrão ISO 8061.
+* **Finalizado** - Indicador booleano de contrato devidamente quitado ou não.
+
+### Compartilhamentos
+
+Entidade que descreve a permissão pelo Cliente do compartilhamento do histórico de Contratos firmados entre uma 
+determinada Instituição Financeira de àquele. Esse compartilhamento se dará por transferência de arquivo XML, a 
+seguir definido.
+
+* **CPF do Cliente** - Relacionamento com a entidade Cliente
+* **CNPJ da Instituição de Origem** - Relacionamento com a entidade Instituição Financeira.
+* **CNPJ da Instituição de Destino** - Relacionamento com a entidade Instituição Financeira.
+* **Data do Aceite** - Data de aceite do compartilhamento de dados entre as instituições pelo cliente. Usar padrão 
+  ISO 8061.
+* **Ainda vigente** - Campo não persistido que indica se o compartilhamento de informações ainda pode ser acessado 
+  pelas instituições.
+
+#### XML de compartilhamento
+
+O arquivo XML de compartilhamento de informações precisa seguir o seguinte XSD (Extended Markup Language Schema 
+Definition):
+
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="compartilhamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cliente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cpf" />
+              <xs:element name="nome" />
+              <xs:element name="endereco" />
+              <xs:element name="dataNascimento" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="contas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="conta">
+                <xs:complexType>
+                  <xs:attribute name="identificador" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="produtos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="produto">
+                <xs:complexType>
+                  <xs:attribute name="dentificador" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="contratos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contrato">
+                <xs:complexType>
+                  <xs:attribute name="dentificador" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
+
+Esse arquivo deve ser gerado no servidor de arquivos da aplicação, não sendo necessárias transmissões.
+
+## Das regras de negócio
+
+Sinta-se a vontade para apresentar regras que lhe façam sentido, mas tenha em mente os seguintes pontos:
+
+* Somente usuário ativos podem acessar a plataforma
+* Usuários referentes aos clientes, uma vez ativados, sempre permanecerão ativos.
+* Apenas são permitidos clientes com no mínimo 16 anos de idade completos no momento da criação de seu registro.
+* Nenhuma conta pode ter saldo inferior a 0 (zero) reais. Ao se tentar contratar um serviço não havendo saldo, o contrato precisa ser negado e o cliente alertado da falta de saldo.
+* Os usuários do tipo "Cliente" podem autorizar, visualizar e encerrar compartilhamentos de dados próprios.
+* Os usuários do tipo "Cliente" podem contratar serviços. Estes serão listados a partir dos seguintes critérios:
+  * Saldo em conta maior ou igual ao valor mínimo de investimento
+  * Produtos pertencentes às instituições financeiras a qual tem conta
+  * Produtos pertencentes às instituições financeiras a qual autorizou o compartilhamento de dados.
+* Os usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar produtos financeiros.
+* Os usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar contas da instituição a qual pertence.
+
+-----
+
+# MELHORAR DAQUI PRA BAIXO
+
+## Das entregas
 
 Você precisará desenvolver o sistema em 3 partes: _Backend_, _API REST_, e _Frontend_. Para cada uma das partes, são requeridas algumas características, mas não se limite somente a elas. Mostre o máximo de features efetivamente funcionais que conseguir!
 
