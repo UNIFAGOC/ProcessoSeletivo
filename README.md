@@ -28,11 +28,22 @@ Nosso disafio envolverá um protótipo dessa plataforma.
 
 Para nossa prova de conceito, desenvolveremos uma plataforma online com controle de acesso por usuário e senha. As entidades envolvidas na plaraforma serão:
 
-![](https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png)
+<a href="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" target="_blank">
+<img src="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" height="400"/>
+</a>
 
-#### A
+### Clientes
 
+Esta entidade trará as informações pessoais sobre os proprietários da contas bancárias. Serão elas:
 
+* **CPF** - Cadastro de Pessoa Física segundo padrão definido pela Receita Federal de 11 dígitos. Outras informações 
+  podem ser localizadas [aqui](https://pt.wikipedia.org/wiki/Cadastro_de_pessoas_f%C3%ADsicas)
+* **Nome** - Nome da pessoa em texto, validado pela expressão regular disponibilizada [aqui](https://pt.stackoverflow.com/a/243008)
+* **Endereço** - Descrição completa do endereçamento do cliente, com logradouro, número, complemento, bairro, cidade e 
+  unidade federativa.
+* **Data de Nascimento** - Data representada seguindo o padrão ISO 8601. Mais informações [aqui](https://en.wikipedia.org/wiki/ISO_8601)
+
+### Instituição Financeira
 
 Você precisará desenvolver o sistema em 3 partes: _Backend_, _API REST_, e _Frontend_. Para cada uma das partes, são requeridas algumas características, mas não se limite somente a elas. Mostre o máximo de features efetivamente funcionais que conseguir!
 
