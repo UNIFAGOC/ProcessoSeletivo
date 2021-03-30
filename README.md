@@ -10,7 +10,7 @@ A entrega deve ser feita por meio de um repositório publico aqui no github. Nã
 
 >![Vida de Programador](https://vidadeprogramador.com.br/wp-content/uploads/2011/10/tirinha319.png)
 >
->(FONTE: Vida de Programador. Disponível em: https://vidadeprogramador.com.br/2011/10/26/prova-pratica/)
+>(FONTE: Vida de Programador. Disponível em: https://vidadeprogramador.com.br/wp-content/uploads/2011/10/tirinha319.png)
 
 Nosso principal objetivo com essa avaliação é observar não só o estado atual da sua maturidade como desenvolvedor, mas também observar o quanto você pode crescer e como podemos ajudar você a conseguir isso. Por isso, lembre-se: Precisamos ver o máximo de módulos funcionais possíveis. 
 
@@ -243,7 +243,10 @@ O sistema deve ser implementado sobre um container Docker e seus arquivos de con
 
 Recomendamos fortemente a utilização de frameworks para cada uma das partes entregáveis para acelerar seu desenvolvimento. Fique a vontade para usar o que tem mais familiaridade. Nós, aqui, utilizamos frequentemente em nossos projetos para a UNIFAGOC e particulares Laravel, Slim, Lumen, Vue.js, React.js, Meteor.js, Sail entre outros. 
 
-![](https://vidadeprogramador.com.br/wp-content/uploads/2012/04/tirinha520.png)
+
+>![](https://vidadeprogramador.com.br/wp-content/uploads/2012/04/tirinha520.png)
+>
+>(FONTE: Vida de Programador. Disponível em: https://vidadeprogramador.com.br/wp-content/uploads/2012/04/tirinha520.png)
 
 ## Pontos de Avaliação
 
@@ -261,10 +264,10 @@ Iremos nos pautar pelos seguintes pontos:
 
 Para qualquer dúvida, estaremos à disposição no Telegram
 
-https://t.me/joinchat/z2Fa9Y6sBjE0MDdh
+https://t.me/joinchat/tuh90ZFpbwBmZGUx
 
-<a href="https://t.me/joinchat/z2Fa9Y6sBjE0MDdh" target="_blank">
-<img alt="telegram" src="https://raw.githubusercontent.com/UNIFAGOC/ProcessoSeletivo/master/assets/telegram.jpeg?token=AATY3YH37NUGDIFPGHLL3KTAMNX6K" height="400"/>
+<a href="https://t.me/joinchat/tuh90ZFpbwBmZGUx" target="_blank">
+<img alt="telegram" src="https://raw.githubusercontent.com/UNIFAGOC/ProcessoSeletivo/master/assets/imagem2.png" height="400"/>
 </a>
 
 -----
