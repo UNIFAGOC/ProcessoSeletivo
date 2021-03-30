@@ -187,20 +187,39 @@ Esse arquivo deve ser gerado no servidor de arquivos da aplicação, não sendo 
 Sinta-se a vontade para apresentar regras que lhe façam sentido, mas tenha em mente os seguintes pontos:
 
 * Somente usuário ativos podem acessar a plataforma
-* Usuários referentes aos clientes, uma vez ativados, sempre permanecerão ativos.
-* Apenas são permitidos clientes com no mínimo 16 anos de idade completos no momento da criação de seu registro.
-* Nenhuma conta pode ter saldo inferior a 0 (zero) reais. Ao se tentar contratar um serviço não havendo saldo, o contrato precisa ser negado e o cliente alertado da falta de saldo.
-* Os usuários do tipo "Cliente" podem autorizar, visualizar e encerrar compartilhamentos de dados próprios.
-* Os usuários do tipo "Cliente" podem contratar serviços. Estes serão listados a partir dos seguintes critérios:
-  * Saldo em conta maior ou igual ao valor mínimo de investimento
-  * Produtos pertencentes às instituições financeiras a qual tem conta
-  * Produtos pertencentes às instituições financeiras a qual autorizou o compartilhamento de dados.
-* Os usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar produtos financeiros.
-* Os usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar contas da instituição a qual pertence.
+* Os registros de usuários são únicos para cada cliente.
+* Uma mesma instituição financeira pode ter vários usuários cadastrados e vinculados à/por ela.
+* Usuários do tipo "Cliente", uma vez ativados, sempre permanecerão ativos.
+* Usuários do tipo "Cliente" podem autorizar, visualizar e encerrar compartilhamentos de dados próprios.
+* Usuários do tipo "Cliente" podem autorizar e visualizar contratos de suas contas.
+* Usuários do tipo "Instituição" podem cadastrar, visualizar compartilhamentos de dados.
+* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar clientes
+* Usuários do tipo "Instituição" podem ativar usuários do tipo "Cliente" se, e somente se, esses possuírem contas para àquela instituição financeira.
+* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar e encerrar contas da instituição a qual pertence.
+* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar produtos financeiros.
+* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar, deletar e encerrar contratos.
 
------
+* Clientes devem ter o CPF válido segundo termos já descritos anteriormente
+* Clientes devem ter ao menos 16 (dezesseis) anos completos no momento de cadastro no sistema
 
-# MELHORAR DAQUI PRA BAIXO
+* Instituições Financeiras precisam ter o CNPJ válido segundo termos já descritos anteriormente
+* Instituições Financeiras precisam ter o Código Bancário único entre elas
+
+* Conta não pode ter saldo inferior a 0 (zero) reais. 
+* Conta precisa ter a data de abertura igual à data de registro. Não é permitido registros pretéritos ou futuros.
+* Ao se encerrar uma conta, a data de encerramento precisa ser a data de registro. Não é permitido registros pretéritos ou futuros.
+
+* Produtos Financeiros precisam ter o identificador único, incremental, iniciando pelo valor `100000`
+* Produtos Financeiros precisam ter valor mínimo maior que 0 (zero) reais
+* Produtos Financeiros precisam ter taxa de administração entre 0 (zero) e 100 (cem) por cento, respeitando os critérios já descritos.
+* Produtos Financeiros precisam ser únicos dentro de uma instituição em descrição, valor mínimo e taxa de administração.
+
+* Contratos precisam ser autorizados pelo Cliente antes de serem debitados das contas daqueles.
+* Contratos autorizados não podem mais ser editados ou deletados.
+* Ao se tentar contratar um serviço não havendo saldo, o contrato precisa ser negado e o cliente alertado da falta de saldo.
+
+* Compartilhamentos precisam ser aceitos pelos usuários tipo "Clientes" antes da geração dos arquivos de transmissão de informações (XML)
+* Compartilhamentos encerrados precisam ter efeito imediato sobre o sistema.
 
 ## Das entregas
 
@@ -222,9 +241,15 @@ A interface de visualização das informações precisará ser desenvolvida com 
 
 O sistema deve ser implementado sobre um container Docker e seus arquivos de configuração (Dockerfile e/ou docker-compose.yml) precisam estar disponíveis no repositório a ser apresentado. Mais uma vez, é imprecindível que no arquivo README.md, na raiz do projeto, esteja bem definida todas as informações necessárias para a execução do projeto.
 
+Recomendamos fortemente a utilização de frameworks para cada uma das partes entregáveis para acelerar seu desenvolvimento. Fique a vontade para usar o que tem mais familiaridade. Nós, aqui, utilizamos frequentemente em nossos projetos para a UNIFAGOC e particulares Laravel, Slim, Lumen, Vue.js, React.js, Meteor.js, Sail entre outros. 
+
+![](https://vidadeprogramador.com.br/wp-content/uploads/2012/04/tirinha520.png)
+
 ## Pontos de Avaliação
 
-Além da completudo dos item acima descritos, serão avaliados:
+Nossa avaliação será bastante ampla. Não se preocupe em entregar todos os pontos perfeitos. Precisamos, primeiro, de entregas. Foque em blocos que você consegue desenvolver do início ao fim.
+
+Iremos nos pautar pelos seguintes pontos:
 
 * Arquivo README.md com as instruções para execução do sistema
 * Legibilidade, facilide para modificação, eficiência e reusabilidade do código
@@ -233,6 +258,12 @@ Além da completudo dos item acima descritos, serão avaliados:
 * Clean Code (diferencial)
 * Object Calisthenics (diferencial)
 * Princípios SOLID (diferencial)
+
+Para qualquer dúvida, estaremos à disposição no Telegram
+
+https://t.me/joinchat/z2Fa9Y6sBjE0MDdh
+
+![]()
 
 ## Material de Apoio
 
