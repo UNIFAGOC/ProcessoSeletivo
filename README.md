@@ -31,7 +31,7 @@ Nosso disafio envolverá um protótipo dessa plataforma.
 Para nossa prova de conceito, desenvolveremos uma plataforma online com controle de acesso por usuário e senha. As entidades envolvidas na plaraforma serão:
 
 <a href="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" target="_blank">
-<img src="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" height="400"/>
+<img alt="imagem1" src="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" height="400"/>
 </a>
 
 ### Clientes
@@ -263,8 +263,11 @@ Para qualquer dúvida, estaremos à disposição no Telegram
 
 https://t.me/joinchat/z2Fa9Y6sBjE0MDdh
 
-![]()
+<a href="https://t.me/joinchat/z2Fa9Y6sBjE0MDdh" target="_blank">
+<img alt="telegram" src="https://raw.githubusercontent.com/UNIFAGOC/ProcessoSeletivo/master/assets/telegram.jpeg?token=AATY3YH37NUGDIFPGHLL3KTAMNX6K" height="400"/>
+</a>
 
+-----
 ## Material de Apoio
 
 Os links abaixo são apenas material para apoio aos seus estudos. Não se limite à eles. Explore as possibilidades e expanções dos conceitos.
