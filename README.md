@@ -76,7 +76,7 @@ Esta entidade trará as informações sobre as instituições registradas no Ban
 
 * **Identificador Único** - Afim de simplificar nosso protótipo, as contas bancárias serão representadas por 
   identificadores únicos e incrementais. Não é preciso verificar e/ou validar dígitos.
-* **CPF do Cliente** - Relacionamento com a entidade Clietes
+* **CPF do Cliente** - Relacionamento com a entidade Clientes
 * **CNPJ da Instituição Financeira** - Relacionamento com a entidade Instituição Financeira
 * **Saldo** - Valor monetário do saldo da conta em Reais. Atentar à representação e casas decimais pertinentes.
 * **Data de Abertura** - Data de criação do registro da conta, automaticamente preenchida. Seguir padrão ISO 8601.
@@ -207,7 +207,7 @@ Sinta-se a vontade para apresentar regras que lhe façam sentido, mas tenha em m
 
 * Conta não pode ter saldo inferior a 0 (zero) reais. 
 * Conta precisa ter a data de abertura igual à data de registro. Não é permitido registros pretéritos ou futuros.
-* Ao se encerrar uma conta, a data de encerramento precisa ser a data de registro. Não é permitido registros pretéritos ou futuros.
+* Ao se encerrar uma conta, a data de encerramento precisa ser a data atual. Não é permitido registros pretéritos ou futuros.
 
 * Produtos Financeiros precisam ter o identificador único, incremental, iniciando pelo valor `100000`
 * Produtos Financeiros precisam ter valor mínimo maior que 0 (zero) reais
