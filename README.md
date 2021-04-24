@@ -24,7 +24,7 @@ Desde outubro de 2020, o mercado financeiro brasileiro vem sendo balançado pela
 
 Na esteira do PIX, o BaCen agora propõe a implementação do _open banking_, uma plataforma institucional de compartilhamento de informações entre instituições financeiras, fintechs e bancos. Para saber um pouco mais, sugiro [esta matéria da InfoMoney](https://www.infomoney.com.br/guias/open-banking/).
 
-Nosso disafio envolverá um protótipo dessa plataforma. 
+Nosso desafio envolverá um protótipo dessa plataforma. 
 
 ## Do contexto e propostas
 
