@@ -1,4 +1,4 @@
-# Processo Seletivo (#2)
+# Processo Seletivo (#3)
 
 Olá,
 
@@ -6,226 +6,242 @@ Inicialmente, gostaria de agradecer muito pela vontade de fazer parte da equipe 
 
 A idéia dessa avaliação é nos permitir identificar melhor as habilidades dos candidatos à vaga de desenvolvedor fullstack. Esse desafio deve ser feito por você. Qualquer dúvida técnica relacionada ao teste, entre em contato com o avaliador.
 
-A entrega deve ser feita por meio de um repositório publico aqui no github. Não se esqueça de criar um arquivo README.md na raiz de seu projeto com as instruções para utilização do seu projeto. Seguiremos extritamente essas instruções, por isso, tente deixar o mais claro e específico possível. Você terá 15 dias para execução de seu teste a contar da hora de envio deste material para seu email por nossa equipe de Recursos Humanos.
+A entrega deve ser feita por meio de um repositório publico aqui no github. Não se esqueça de criar um arquivo README.md na raiz de seu projeto com as instruções para utilização do seu projeto. Seguiremos extritamente essas instruções, por isso, tente deixar o mais claro e específico possível. Atente-se para o período de execução de seu teste. Ele estará explícito no email enviado por nossa equipe de Recursos Humanos.
 
 >![Vida de Programador](https://vidadeprogramador.com.br/wp-content/uploads/2011/10/tirinha319.png)
 >
 >(FONTE: Vida de Programador. Disponível em: https://vidadeprogramador.com.br/wp-content/uploads/2011/10/tirinha319.png)
 
-Nosso principal objetivo com essa avaliação é observar não só o estado atual da sua maturidade como desenvolvedor, mas também observar o quanto você pode crescer e como podemos ajudar você a conseguir isso. Por isso, lembre-se: Precisamos ver o máximo de módulos funcionais possíveis. 
+Nosso principal objetivo com essa avaliação é observar não só o estado atual da sua maturidade como desenvolvedor, mas também o quanto você pode crescer e como podemos ajudar você a conseguir isso. Por isso, lembre-se: Foque em entregar o máximo de pontos possível. Mesmo que não consiga completar tudo, envie o ponto em que chegar. Sabemos que a prova é muito grande, e é proposital! 
 
-> #### Não deixe de nos mostrar seu trabalho!
+> ## Não deixe de nos mostrar seu trabalho!
 
 ------
 
-## Mudanças no mercado à caminho
+## Pré-Enem dos Amigos
 
-Desde outubro de 2020, o mercado financeiro brasileiro vem sendo balançado pela iniciativa de integração tecnológica promovida pelo Banco Central (BaCen). O lançamento do PIX, método de pagamento instantâneo, vem mudando a forma com que as pessoas interagem com as empresas prestadoras de serviços, comércio e indústrias. Já não é incomun a possibilidade de pagamento de nossas compras na Internet utilizando a nova ferramenta.
+Um de nossos alunos quer, junto à amigos, crirar um cursinho pré-ENEM para ajudar os membros da comunidade dele a ingressarem na vida acadêmica. Nós, de pronto, apoiamos a ideia. Para ajudar na gestão do curso, nos propomos a desenvolver um pequeno sistema de cadastro dos alunos, horários das aulas e dos professores voluntário para as aulas. Nossa equipe já esta trabalhando em outras partes do sistema. Sua tarefa será desenvolver esse primeiro módulo: o cadastro de alunos, professores e turmas.
 
-Na esteira do PIX, o BaCen agora propõe a implementação do _open banking_, uma plataforma institucional de compartilhamento de informações entre instituições financeiras, fintechs e bancos. Para saber um pouco mais, sugiro [esta matéria da InfoMoney](https://www.infomoney.com.br/guias/open-banking/).
+Para isso precisamos que os seguintes pontos sejam contemplados:
 
-Nosso desafio envolverá um protótipo dessa plataforma. 
+<ul>
+  <li>
+    De início, é preciso que exista ao menos um professor-administrador registrado no sistema para que os demais cadastros possam ser gerados.
+  </li>
+  <li>
+    Cada aluno e professor precisam tem um perfíl de usuário único.
+  </li>
+  <li>
+    Sendo um professor-administrador, é preciso que eu consiga cadastrar um novo aluno no sistema. Para isso, registrtarei obrigatoriamente:
+    <ul>
+      <li>Nome oficial</li>
+      <li>Nome social</li>
+      <li>
+        Data de Nascimento
+        <ul>
+          <li>O aluno precisa ter mais de 16 anos completos.</li>
+        </ul>
+      </li>
+      <li>
+        Identificação de gênero
+        <ul>
+          <li>Homem.</li>
+          <li>Mulher.</li>
+          <li>Ambos.</li>
+          <li>Nenhum.</li>
+          <li>Prefiriu não informar.</li>
+        </ul>
+      </li>
+      <li>
+        Número do CPF
+        <ul>
+          <li>Precisa ser único.</li>
+          <li>Precisa ser válido (http://www.macoratti.net/alg_cpf.htm).</li>
+        </ul>
+      </li>
+      <li>
+        CEP
+        <ul>
+          <li>Precisa ser válido (https://viacep.com.br).</li>
+        </ul>
+      </li>
+    </ul>
+    Opcionalmente registrarei:
+    <ul>
+      <li>
+        Auto declaração de cor:
+        <ul>
+          <li>Afrodescendente</li>
+          <li>Indígena</li>
+          <li>Amarelo</li>
+          <li>Negro</li>
+          <li>Branco</li>
+          <li>Preto</li>
+          <li>Pardo</li>
+        </ul>
+      </li>
+      <li>Observações textuais.</li>
+    </ul>
+  </li>
+  <li>
+    Sendo um professor-administrador, é preciso que eu consiga cadastrar um novo professor no sistema. Para isso, registrtarei obrigatoriamente: 
+    <ul>
+      <li>
+        É Administrador?
+        <ul>
+          <li>Campo booleano</li>
+          <li>Por padrão, marcado como falso</li>
+        </ul>
+      </li>
+      <li>Nome oficial</li>
+      <li>Nome social</li>
+      <li>
+        Data de Nascimento
+        <ul>
+          <li>O aluno precisa ter mais de 16 anos completos.</li>
+        </ul>
+      </li>
+      <li>
+        Identificação de gênero
+        <ul>
+          <li>Homem.</li>
+          <li>Mulher.</li>
+          <li>Ambos.</li>
+          <li>Nenhum.</li>
+          <li>Prefiriu não informar.</li>
+        </ul>
+      </li>
+      <li>
+        Número do CPF
+        <ul>
+          <li>Precisa ser único.</li>
+          <li>Precisa ser válido (http://www.macoratti.net/alg_cpf.htm).</li>
+        </ul>
+      </li>
+      <li>
+        CEP
+        <ul>
+          <li>Precisa ser válido (https://viacep.com.br).</li>
+        </ul>
+      </li>
+      <li>
+        Graduação:
+        <ul>
+          <li>Graduand@</li>
+          <li>Graduad@</li>
+          <li>Especialista</li>
+          <li>Mestrand@</li>
+          <li>Mestre</li>
+          <li>Doutorand@</li>
+          <li>Doutor(a)</li>
+          <li>Pós-Doutorand@</li>
+          <li>Pós-Doutor(a)</li>
+        </ul>
+      </li>
+      <li>
+        Disciplina: (pode ser mais de uma)
+        <ul>
+          <li>Biologia</li>
+          <li>Química</li>
+          <li>Física</li>
+          <li>História</li>
+          <li>Geografia</li>
+          <li>Filosofia</li>
+          <li>Sociologia</li>
+          <li>Língua Portuguesa</li>
+          <li>Literatura</li>
+          <li>Língua Inglesa</li>
+          <li>Língua Espanhola</li>
+          <li>Artes</li>
+          <li>Educação Física</li>
+          <li>Tecnologias da Informação e Comunicação</li>
+          <li>Matemática</li>
+          <li>Redação</li>
+        </ul>
+      </li>
+    </ul>
+    Opcionalmente registrarei:
+      <ul>
+        <li>
+          Disponibilidade de horários para aula
+          <ul>
+            <li>Tipo de dado abstrato que representa a disponibilidade de horários de aula do professor durante cada um dos dias da semana. Sinta-se livre para propor a sua estrutura.</li>
+          </ul>
+        </li>
+        <li>
+          Email
+          <ul>
+            <li>Precisa ser válido</li>
+          </ul>
+        </li>
+        <li>
+          Telefone
+          <ul>
+            <li>Precisa ser válido</li>
+          </ul>
+        </li>
+        <li>
+          É WhatsApp?
+          <ul>
+            <li>Campo booleano</li>
+            <li>Por padrão, marcado como falso</li>
+          </ul>
+        </li>
+      </ul>
+    </ul>
+  </li>
+  <li>
+    Sendo um professor-administrador, é preciso que eu consiga cadastrar um novo horário de aula no sistema. Para isso, registrtarei obrigatoriamente:
+    <ul>
+      <li>Data Início das Aulas</li>
+      <li>Data Término das Aulas</li>
+      <li>Horário Início das Aulas</li>
+      <li>Horário Término das Aulas</li>
+      <li>Dias da Semana das Aulas</li>
+      <li>Professor</li>
+      <li>Disciplina</li>
+      <li>Vagas da turma</li>
+      <li>
+        Horário ativo?
+        <ul>
+          <li>Campo booleano</li>
+          <li>Por padrão, marcado como falso</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Sendo um professor-administrador, é preciso que eu consiga vincular professores aos horários de aula, respeitando:
+    <ul>
+      <li>Um professor não pode dar aula em dois horários que se sobreponham.</li>
+      <li>Um professor não pode dar aula em mais que quatro horas por dia.</li>
+      <li>Um professor não pode das aula em mais de duas disciplinas por dia.</li>
+    </ul>
+  </li>
+  <li>
+    Sendo um professor-administrador, é preciso que eu consiga vincular alunos aos horários de aula.
+  </li>
+  <li>
+    Sendo um professor, é preciso que eu consiga visualizar, assim que acessar o sistema, uma listagem com todos os horários de aula vinculados à mim, com o dia da semana, horário de início, horário de término e disciplina.
+  </li>
+  <li>
+    Sendo um professor, é preciso que eu consiga visualizar, assim que eu clicar sobre um horário, uma listagem com todos os alunos.
+  </li>
+  <li>
+    Sendo um aluno, é preciso que eu consiga visualizar, assim que eu acessar o sistema, uma listagem com todos os horários de aula vinculados à mim, com o dia da semana, horário de início, horário de término e disciplina.
+  </li>
+  <li>
+    Sendo um aluno, é preciso que eu consiga visualizar, assim que eu clicar sobre um horário, as informações do professor daquele horário, sendo nome social, graduação, telefone (caso cadastrado) e se é WhatsApp (caso cadastrado).
+  </li>
+</ul>
 
-## Do contexto e propostas
+-----
 
-Para nossa prova de conceito, desenvolveremos uma plataforma online com controle de acesso por usuário e senha. As entidades envolvidas na plaraforma serão:
+## Entregas
 
-<a href="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" target="_blank">
-<img alt="imagem1" src="https://github.com/UNIFAGOC/ProcessoSeletivo/raw/master/assets/imagem1.png" height="400"/>
-</a>
+Você precisará desenvolver o sistema em 3 partes: Backend, API REST, e Frontend. Para cada uma das partes, são requeridas algumas características, mas não se limite somente a elas. Mostre o máximo de features efetivamente funcionais que conseguir!
 
-### Clientes
-
-Esta entidade trará as informações pessoais sobre os proprietários da contas bancárias. Serão elas:
-
-* **CPF** - Cadastro de Pessoa Física segundo padrão definido pela Receita Federal de 11 dígitos. Outras informações 
-  podem ser localizadas [aqui](https://pt.wikipedia.org/wiki/Cadastro_de_pessoas_f%C3%ADsicas)
-* **Nome** - Nome da pessoa em texto, validado pela expressão regular disponibilizada [aqui](https://pt.stackoverflow.com/a/243008)
-* **Endereço** - Descrição completa do endereçamento do cliente, com logradouro, número, complemento, bairro, cidade e 
-  unidade federativa.
-* **Data de Nascimento** - Data representada seguindo o padrão ISO 8601. Mais informações [aqui](https://en.wikipedia.org/wiki/ISO_8601)
-
-### Instituição Financeira
-
-Esta entidade trará as informações sobre as instituições registradas no Banco Central. 
-
-* **CNPJ** - Candastro Nascional de Pessoas Jurídicas segundo padrão da Receita Federal de 14 dígitos. Outras informações podem ser localizadas [aqui](https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica)
-* **Razão Social** - Nome único das empresas mediante as entidades fiscais.
-* **Nome Fantasia** - Nome divulgado pelas empresas. Similar às marcas ou produtos. A título de exemplo, o Banco do Brasil (nome fantasia) tem por razão social "Banco do Brasil S.A.".
-* **Código Bancário** - Cada instituição financeira que opera no Brasil possui um código identificador único. Alguns 
-  desses valores podem ser localizados [aqui](https://contasimples.com/blog/lista-de-codigos-dos-bancos/)
-* **Logomarca** - Identificação visual do banco. Pode-se utilizar uma imagem padrão, caso seja necessário.  
-
-### Usuários
-
-* **Login** - Nome único de identificação dos usuários dentro do sistema.
-* **Senha** - Senha de acesso ao sistema. Deve ser criptografada em base64 para persistência no banco de dados. 
-  Precisa apresentar o seguinte grau de complexidade:
-  * Ao menos 6 caracteres
-  * Ao menos 1 letra maiúscula
-  * Ao menos 1 letra minúscula
-  * Ao menos 1 dígito
-  * Ao menos um caracter especial dentre: ( ) # @ ! ?
-* **Tipo** - Os usuários do sistema podem ser de dois típos: Clientes ou Instituições. As regras de negócio 
-  pertinentes a cada um serão descritas a frente.
-* **Entidade** - Relacionamento com a entidade correspondente ao campo **Tipo**.
-* **Ativo** - Campo booleano, com valor padrão `false` que limita o acesso dos usuários ao sistema. Esse limite 
-  aplica-se apenas a usuários com `Tipo = Instituição`
-
-### Contas
-
-* **Identificador Único** - Afim de simplificar nosso protótipo, as contas bancárias serão representadas por 
-  identificadores únicos e incrementais. Não é preciso verificar e/ou validar dígitos.
-* **CPF do Cliente** - Relacionamento com a entidade Clientes
-* **CNPJ da Instituição Financeira** - Relacionamento com a entidade Instituição Financeira
-* **Saldo** - Valor monetário do saldo da conta em Reais. Atentar à representação e casas decimais pertinentes.
-* **Data de Abertura** - Data de criação do registro da conta, automaticamente preenchida. Seguir padrão ISO 8601.
-* **Data de Encerramento** - Data de fechamento da conta. Quando não encerrada, guardar valor `null`. Seguir padrão ISO 
-  8601
-
-### Produtos Financeiros
-
-* **Identificador Único** - Identificador único, incremental, iniciando pelo valor `100000`
-* **CNPJ da Instituição Financeira** - Relacionamento com a entidade Instituição Financeira
-* **Descrição** - Campo em texto descrevendo o produto ofertado.
-* **Valor Mínimo** - Valor monetário mínimo para acesso ao produto. Validar em confronto com o saldo na conta do 
-  Cliente. Atentar para representação e casas decimais pertinentes.
-* **Taxa de Administração** - Valor percentual cadastrado pela instituição com 4 algarismos significativos ([ver 
-  aqui](https://pt.wikipedia.org/wiki/Algarismo_significativo)). Atentar para 
-  representação e casas decimais pertinentes.
-
-### Contratos
-
-* **Identificador Único** - Identificador único e incremental
-* **Número da Conta** - Relacionamento com a entidade Contas
-* **Identificador do Produto Financeiro** - Relacionamento com a entidade Produto Financeiro
-* **Valor Investido** - Valor montário utilizado na contratação do produto.
-* **Taxa de Administração** - Valor percentual da taxa de administração. Deve sempre ser menor ou igual ao valor 
-  registrado no campo relativo da entidade Produto Financeiro.
-* **Data de Contratacao** - Data de assinatura do contrato. Sempre igual ou superior à data de abertura da conta. 
-  Usar padrão ISO 8061.
-* **Finalizado** - Indicador booleano de contrato devidamente quitado ou não.
-
-### Compartilhamentos
-
-Entidade que descreve a permissão pelo Cliente do compartilhamento do histórico de Contratos firmados entre uma 
-determinada Instituição Financeira de àquele. Esse compartilhamento se dará por transferência de arquivo XML, a 
-seguir definido.
-
-* **CPF do Cliente** - Relacionamento com a entidade Cliente
-* **CNPJ da Instituição de Origem** - Relacionamento com a entidade Instituição Financeira.
-* **CNPJ da Instituição de Destino** - Relacionamento com a entidade Instituição Financeira.
-* **Data do Aceite** - Data de aceite do compartilhamento de dados entre as instituições pelo cliente. Usar padrão 
-  ISO 8061.
-* **Ainda vigente** - Campo não persistido que indica se o compartilhamento de informações ainda pode ser acessado 
-  pelas instituições.
-
-#### XML de compartilhamento
-
-O arquivo XML de compartilhamento de informações precisa seguir o seguinte XSD (Extended Markup Language Schema 
-Definition):
-
-``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="compartilhamento">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="cliente">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="cpf" />
-              <xs:element name="nome" />
-              <xs:element name="endereco" />
-              <xs:element name="dataNascimento" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="contas">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="conta">
-                <xs:complexType>
-                  <xs:attribute name="identificador" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="produtos">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="produto">
-                <xs:complexType>
-                  <xs:attribute name="dentificador" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="contratos">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="contrato">
-                <xs:complexType>
-                  <xs:attribute name="dentificador" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>
-```
-
-Esse arquivo deve ser gerado no servidor de arquivos da aplicação, não sendo necessárias transmissões.
-
-## Das regras de negócio
-
-Sinta-se a vontade para apresentar regras que lhe façam sentido, mas tenha em mente os seguintes pontos:
-
-* Somente usuário ativos podem acessar a plataforma
-* Os registros de usuários são únicos para cada cliente.
-* Uma mesma instituição financeira pode ter vários usuários cadastrados e vinculados à/por ela.
-* Usuários do tipo "Cliente", uma vez ativados, sempre permanecerão ativos.
-* Usuários do tipo "Cliente" podem autorizar, visualizar e encerrar compartilhamentos de dados próprios.
-* Usuários do tipo "Cliente" podem autorizar e visualizar contratos de suas contas.
-* Usuários do tipo "Instituição" podem cadastrar, visualizar compartilhamentos de dados.
-* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar clientes
-* Usuários do tipo "Instituição" podem ativar usuários do tipo "Cliente" se, e somente se, esses possuírem contas para àquela instituição financeira.
-* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar e encerrar contas da instituição a qual pertence.
-* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar e deletar produtos financeiros.
-* Usuários do tipo "Instituição" podem cadastrar, visualizar, editar, deletar e encerrar contratos.
-
-* Clientes devem ter o CPF válido segundo termos já descritos anteriormente
-* Clientes devem ter ao menos 16 (dezesseis) anos completos no momento de cadastro no sistema
-
-* Instituições Financeiras precisam ter o CNPJ válido segundo termos já descritos anteriormente
-* Instituições Financeiras precisam ter o Código Bancário único entre elas
-
-* Conta não pode ter saldo inferior a 0 (zero) reais. 
-* Conta precisa ter a data de abertura igual à data de registro. Não é permitido registros pretéritos ou futuros.
-* Ao se encerrar uma conta, a data de encerramento precisa ser a data atual. Não é permitido registros pretéritos ou futuros.
-
-* Produtos Financeiros precisam ter o identificador único, incremental, iniciando pelo valor `100000`
-* Produtos Financeiros precisam ter valor mínimo maior que 0 (zero) reais
-* Produtos Financeiros precisam ter taxa de administração entre 0 (zero) e 100 (cem) por cento, respeitando os critérios já descritos.
-* Produtos Financeiros precisam ser únicos dentro de uma instituição em descrição, valor mínimo e taxa de administração.
-
-* Contratos precisam ser autorizados pelo Cliente antes de serem debitados das contas daqueles.
-* Contratos autorizados não podem mais ser editados ou deletados.
-* Ao se tentar contratar um serviço não havendo saldo, o contrato precisa ser negado e o cliente alertado da falta de saldo.
-
-* Compartilhamentos precisam ser aceitos pelos usuários tipo "Clientes" antes da geração dos arquivos de transmissão de informações (XML)
-* Compartilhamentos encerrados precisam ter efeito imediato sobre o sistema.
-
-## Das entregas
-
-Você precisará desenvolver o sistema em 3 partes: _Backend_, _API REST_, e _Frontend_. Para cada uma das partes, são requeridas algumas características, mas não se limite somente a elas. Mostre o máximo de features efetivamente funcionais que conseguir!
-
-### Backend
+### BACKEND
 
 O núcleo funcional do nosso sistema deverá ser desenvolvido em PHP 7+, considerando todas as boas práticas de desenvolvimento que achar importantes e em especial se atentando ao máximo as PHP Standard Recommendations (PSR). Esse backend deverá ser capaz de representar, modelar e tratar todos os dados envolvidos no sistema. É nele que as regras de negócios precisam estar implementadas e validadas. Os dados precisarão ser armazenados e recuperados de um banco de dados MySQL 5.5+ (indicamos a utilização da versão 5.7 por sua estabilidade). Atente-se à modelagem desse banco. Muitas vezes, um bom modelo de dados auxilia demais na implementação dos códigos.
 
@@ -233,20 +249,17 @@ O núcleo funcional do nosso sistema deverá ser desenvolvido em PHP 7+, conside
 
 Toda a comunicação do aplicativo com suas diferentes instâncias precisará ser feita sob uma API REST privada. Os métodos precisarão representar a criticidade das informações e a segurança dos dados. Observer que para cada método existem operações conceitualmente já definidas.
 
-### Frontend
+### FRONTEND
 
-A interface de visualização das informações precisará ser desenvolvida com tecnologias Javascript, CSS3 e HTML5. Indicamos fortemente a utilização do framework [Vue.js](https://vuejs.org/) e/ou [Quasar](https://quasar.dev/). Utilizamos esses dois nos nossos produtos e a implementação com eles será um diferencial, porém, bons códigos serão sempre bem avaliados, sejam em qual estrutura for. 
+A interface de visualização das informações precisará ser desenvolvida com tecnologias Javascript, CSS3 e HTML5. Indicamos fortemente a utilização do framework Vue.js e/ou Quasar. Utilizamos esses dois nos nossos produtos e a implementação com eles será um diferencial, porém, bons códigos serão sempre bem avaliados, sejam em qual estrutura for.
 
-## Ambiente de Desenvolvimento e Entrega
+-----
 
-O sistema deve ser implementado sobre um container Docker e seus arquivos de configuração (Dockerfile e/ou docker-compose.yml) precisam estar disponíveis no repositório a ser apresentado. Mais uma vez, é imprecindível que no arquivo README.md, na raiz do projeto, esteja bem definida todas as informações necessárias para a execução do projeto.
+## Não precisa reinventar a roda
 
-Recomendamos fortemente a utilização de frameworks para cada uma das partes entregáveis para acelerar seu desenvolvimento. Fique a vontade para usar o que tem mais familiaridade. Nós, aqui, utilizamos frequentemente em nossos projetos para a UNIFAGOC e particulares Laravel, Slim, Lumen, Vue.js, React.js, Meteor.js, Sail entre outros. 
+Recomendamos fortemente a utilização de frameworks para cada uma das partes entregáveis para acelerar seu desenvolvimento. Fique a vontade para usar o que tem mais familiaridade. Nós, aqui, utilizamos frequentemente em nossos projetos para a UNIFAGOC e particulares Laravel, Slim, Lumen, Vue.js, React.js, Meteor.js, Sail entre outros.
 
-
->![](https://vidadeprogramador.com.br/wp-content/uploads/2012/04/tirinha520.png)
->
->(FONTE: Vida de Programador. Disponível em: https://vidadeprogramador.com.br/wp-content/uploads/2012/04/tirinha520.png)
+-----
 
 ## Pontos de Avaliação
 
@@ -262,16 +275,10 @@ Iremos nos pautar pelos seguintes pontos:
 * Object Calisthenics (diferencial)
 * Princípios SOLID (diferencial)
 
-Para qualquer dúvida, estaremos à disposição no Telegram
-
-https://t.me/joinchat/tuh90ZFpbwBmZGUx
-
-<a href="https://t.me/joinchat/tuh90ZFpbwBmZGUx" target="_blank">
-<img alt="telegram" src="https://raw.githubusercontent.com/UNIFAGOC/ProcessoSeletivo/master/assets/imagem2.png" height="400"/>
-</a>
-
 -----
 ## Material de Apoio
+
+Para qualquer dúvida, pode entrar em contato com nossa equipe pelo chat em http://comvoce.unifagoc.edu.br/.
 
 Os links abaixo são apenas material para apoio aos seus estudos. Não se limite à eles. Explore as possibilidades e expanções dos conceitos.
 
